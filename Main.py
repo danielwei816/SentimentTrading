@@ -26,9 +26,6 @@ firebase = pyrebase.initialize_app(firebase_config)
 # Get a reference to the auth service
 auth = firebase.auth()
 
-# Log the user in
-#user = auth.sign_in_with_email_and_password(email, password)
-
 # Get a reference to the database service
 db = firebase.database()
 
@@ -37,7 +34,7 @@ data = {
     "name": "Mortimer 'Morty' Smith"
 }
 
-# Pass the user's idToken to the push method
+# Push the data to the realtime database
 results = db.child("users").push(data)
 
 data_amd = pdr.get_data_yahoo('AMD', '1-Jan-20')
