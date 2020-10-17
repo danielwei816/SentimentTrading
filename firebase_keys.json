@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "sentimenttrading-f5ae7",
+  "private_key_id": "ed2cf0125941ce88a7cdf3a924c71814c8fcae59",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC4zVHUNbrd+SPF\nMMxPA3qI9xIt51DnGruGK7DoPojHIY7Zr/yjxpW0i1J5cSu4sooFUx2vcMCfSYjf\n3qlKDmZoZhqlQFj5S6wrBCVGyNC1c2JqxJGOzTDqImSZog3bdXg8NeZYOMeuXRP9\nnhb9i0cdZGb8eFdB4rKxSlRlrJVXDIgQ+Kvcbr6/DqGVenH40iObjPJSq5KzOcvL\nfRta5wQRnHB8xX9DI1TXJSpW1pBW/3G0J06kNxAqYPVo+q8GSAa8Qc989on03Cbw\nuK2O72AxJa7f6q5vh0LhzjJ3HdsElml606PbCdBzMMU/1XoCm+R79N6qqQni52Dr\nBs4DfAYFAgMBAAECggEAAxhBIg4iSnxVGoTGLx6OS0Pj9IvWoYAjmswZgtIlRTxt\nIX0efHmjYSoiH/GCu22V/R/Ws+zt9Nzs417ds+VI1r+6+4B33Pjk8bV4kFZllFxR\nzhrrmxoZkxovWBlMJRwy/sMiT+DniyZ44rrmhKlz7+ySAvFa+Ln8pxZpEmjQ+Wuv\nfGvd7wzofBMheqYbl+v+ab5HGk28Zz7SE7/2q6dLNe8nVTYTPPELBsUptMCfLxyf\nokCmFKpswBJWZFld0bQDCsfkgUgyomuO/LvqswUcAx1zCNktw5JgozB5m/mgErAF\noc3h2vZIb85WaXiZzkF8E4GhQRTEIxwRoQk48Fkd8QKBgQDu+r96A5Ia2Xls6N/Y\nlm7glWetASGS6eVM+HQNUNinLAcE9WVXEwNXgnPKsCjDGWzBUW7KH3USvCZ3Vdjm\nK/QQB01ym6HVyXnjxLPWoOVb2OkZ/xDoGJkb38NAwqPZ2WowhxKCgqciudeNDr1e\nyQaXfXPHhGwjmPUM0Odggb0O+QKBgQDF9sSZjJ+ini3cNFbl4saNJQH326pBzXn5\ngFYMYRHG2+9lJU/1GciGh52NY6hVwhurofv3yoAdRWNSLceXYtKuj+HAjpgEnaKL\n4UhEOcaZHExofW7qq1Yi6Q7XAjaU+xl8wQSBIjzMQo53zI6nNnuuf3KRU7fkVctv\nfD39ht1WbQKBgHCw3Un0FRmEI7Yvuh6wEWjmCxWRyvs0QGSjZFZDIWbzY/v6m+cL\nmC/T3DZgC1i0zIv8knnNi69h+eGcIcOoRlaomuTIbvAZKdk2EHfNN1qwVntjw90u\nfESgp7oKDqnT1Dc9+oSAh7/gUry5jqL7uJgHGGmlEDlZD3UTrYfcpgJBAoGBAJzS\noOn3AZskbbYM7G4OmTXFBGsiZBzeturVJNWHrDp5jor05QOImlcgZcpVEUxmid8M\nYnvoulb12fmG9J9TlQzeRHtzOrAlZFglbkdF8bLnPQxlmZFji8f6Elx3j1+0D3vJ\nuFTIF5vEefIjZTrHqXER22OPC5Vh9dfqd3048mx9AoGBAOm+fNrk+QTuO1JtiI/H\nqWmN2pk7I1A0T56+GcfoaL5ivP7xCeyyUAwi3EipOVMz6m+JLUyaPE1FYj+bN6Pt\nwRe9ai5wbRBCEtD+1FCHwZlanCWH6N60Ypznjh7GuaywQpJUXl+Gb1Y5fC1dpAr5\nocTP5CoEfb5V9sUaQZwaxqdr\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-iu2lg@sentimenttrading-f5ae7.iam.gserviceaccount.com",
+  "client_id": "108245288163368225869",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-iu2lg%40sentimenttrading-f5ae7.iam.gserviceaccount.com"
+}
