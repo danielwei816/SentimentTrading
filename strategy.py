@@ -44,8 +44,11 @@ class SmaCrossBenchmark(bt.Strategy):
             self.close()  # close long position
 
 
-tickers = ["MSFT", "AAPL", "AMD", "BA", "AMZN", "DIS", "FB", "NVDA", "MGM", "PPL", "AAL", "ATVI", "NFLX", "INTC", "JPM", "GE"]
+tickers = ["MSFT", "AAPL", "AMD", "BA", "AMZN", "DIS", "FB", "NVDA", "MGM", "PPL", "AAL", "ATVI", "NFLX", "INTC", "JPM", "GE", "BAC", "CSCO", "EBAY", "MU"]
 
+sentimentWins = 0
+sentimentProfit = 0
+smaProfit = 0
 for ticker in tickers:
     cerebroStrategy = bt.Cerebro()  # create a "Cerebro" engine instance
     cerebroBenchmark = bt.Cerebro()
@@ -84,3 +87,14 @@ for ticker in tickers:
     
     # Print out the final result for Benchmark
     print('Final Portfolio Value: %.2f' % cerebroBenchmark.broker.getvalue())
+    
+    # Evaluate results
+    sentimentProfit += cerebroStrategy.broker.getvalue() - 100000
+    smaProfit += cerebroBenchmark.broker.getvalue() - 100000
+    if cerebroStrategy.broker.getvalue() > cerebroBenchmark.broker.getvalue():
+        sentimentWins += 1
+    print("SENTIMENT WINS" if cerebroStrategy.broker.getvalue() > cerebroBenchmark.broker.getvalue() else "SMA WINS")
+    
+print("Sentiment won: " + str(sentimentWins) + "/20")
+print("Sentiment profit: " + str(sentimentProfit))
+print("SMA profit: " + str(smaProfit))
