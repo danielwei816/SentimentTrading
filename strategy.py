@@ -10,6 +10,7 @@ from firebase_auth import db
 from datetime import datetime
 import backtrader as bt
 
+# Our Sentiment Analysis Strategy
 class SentimentStrategy(bt.Strategy):
     
     def __init__(self):
@@ -22,7 +23,7 @@ class SentimentStrategy(bt.Strategy):
             self.close();
         self.counter += 1
 
-
+# Typical SMA Cross strategy being used as our benchmark
 class SmaCrossBenchmark(bt.Strategy):
     # list of parameters which are configurable for the strategy
     params = dict(
@@ -56,7 +57,7 @@ for ticker in tickers:
     # Pull stock data from Yahoo Finance
     data = bt.feeds.YahooFinanceData(dataname=ticker,
                                       fromdate=datetime(2020, 1, 1),
-                                      todate=datetime(2020, 10, 17))
+                                      todate=datetime(2020, 10, 18))
     
     # Add the data feed to each strategy
     cerebroStrategy.adddata(data)  
