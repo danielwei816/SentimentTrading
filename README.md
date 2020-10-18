@@ -12,12 +12,17 @@ This program compares the performance of our sentiment-driven stock trading algo
   - A subreddit known for its young and brash investors, the perfect example of the traders driving the volatility of the post coronavirus market.
 - Firebase/pyrebase
   - Allowed us to store sentiment data to use with backtrader.
+    - https://github.com/thisbejim/Pyrebase
 - Backtrader
   - A python module that backtests trading strategies against a Yahoo Finance price data.
+    - https://github.com/mementum/backtrader
 - Data analysis tools: 
   - Vader sentiment analysis - used to obtain numerical data representing the positive or negative sentiment of each comment.
+    - https://github.com/cjhutto/vaderSentiment
   - matplotlib - used for plotting graphical representations of stock data.
+    - https://github.com/matplotlib/matplotlib
   - pushshift.io api - used to collect comment data from reddit.
+    - https://github.com/pushshift/api
 
 ## Our Findings
 ```
