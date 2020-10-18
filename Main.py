@@ -71,7 +71,6 @@ plt.show()
 
 analyser = SentimentIntensityAnalyzer()
 
-
 # for i in range(290):
 #     data = requests.get('https://api.pushshift.io/reddit/search/comment/?q=tesla&subreddit=wallstreetbets&after={}d&before={}d&size=500'.format(i+1, i))
 #     dict_data = data.json()
