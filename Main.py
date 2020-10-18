@@ -1,6 +1,9 @@
 import pandas as pd
 import numpy as np
+import time
 import requests
+import pyrebase
+from datetime import date
 import json
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
@@ -8,6 +11,23 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import pandas_datareader as pdr
 import matplotlib.pyplot as plt
 
+# firebase configuration keys
+firebase_config = {
+  "apiKey": "AIzaSyCmmznsEI68l0AVICMuB5Gm3rRDifJt-xE",
+  "authDomain": "sentimenttrading-f5ae7.firebaseapp.com",
+  "databaseURL": "https://sentimenttrading-f5ae7.firebaseio.com/",
+  "storageBucket": "sentimenttrading-f5ae7.appspot.com",
+  "serviceAccount": "firebase_keys.json"
+}
+
+# initialize firebase
+firebase = pyrebase.initialize_app(firebase_config)
+
+# Get a reference to the auth service
+auth = firebase.auth()
+
+# Get a reference to the database service
+db = firebase.database()
 
 data_amd = pdr.get_data_yahoo('AMD', '1-Jan-20')
 data_amd.head()
@@ -43,8 +63,35 @@ plt.show()
 
 analyser = SentimentIntensityAnalyzer()
 
-for i in range(290):
-    df = pd.DataFrame.from_dict(requests.get('https://api.pushshift.io/reddit/search/comment/?q=tesla&subreddit=wallstreetbets&after={}d&before={}d&size=500'.format(i+1, i)))
-    print(df)
+
+tickers = ["MSFT", "AAPL", "AMD", "BA", "AMZN", "DIS", "FB", "NVDA", "MGM", "PPL", "AAL", "ATVI", "NFLX", "INTC", "JPM", "GE", "BAC", "CSCO", "EBAY", "MU"]
+num_days = date.today() - date(2020, 1, 1)
+
+
+for i in range(len(tickers)):
+    print(tickers[i])
+    sent_list = [0] * 365
+   
+    for j in range(num_days.days+7, 7, -7):
+        sum = 0
+        stock_com = requests.get('https://api.pushshift.io/reddit/search/comment/?q={}&subreddit=wallstreetbets&after={}d&before={}d&size=500'.format(tickers[i], j, j-7))
+        stock_com = stock_com.json()
+        
+        for k in range(len(stock_com['data'])):
+            score = analyser.polarity_scores(stock_com['data'][k]['body'])
+            # print(score['compound'])
+            sum += score['compound']
+            
+        print(sum)
+        print(len(stock_com['data']))
+        avg = sum/len(stock_com['data'])
+        print(avg)
+        sent_list[num_days.days +7 -j] = avg
+        time.sleep(1)
+       
+    db.update({tickers[i]: sent_list})
     
+    
+    
+
     
