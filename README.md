@@ -19,9 +19,8 @@ This program compares the performance of our sentiment-driven stock trading algo
   - matplotlib - used for plotting graphical representations of stock data.
   - pushshift.io api - used to collect comment data from reddit.
 
-
 ## Our Findings
-'''
+```
 ---MSFT---
 Sentiment:
 Starting Portfolio Value: 100000.00
@@ -185,4 +184,4 @@ SENTIMENT WINS
 Sentiment won: 13/20
 Sentiment profit: 54267.2
 SMA profit: 350.629999999961
-'''
+```
