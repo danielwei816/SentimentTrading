@@ -8,7 +8,7 @@ Created on Sat Oct 17 22:56:50 2020
 
 from firebase_auth import db
 from datetime import datetime
-import backtrader as bt
+import backtrader as bt 
 
 # Our Sentiment Analysis Strategy
 class SentimentStrategy(bt.Strategy):
